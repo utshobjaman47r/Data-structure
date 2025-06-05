@@ -23,6 +23,6 @@ console.log(c)
 console.log(x,y,z);
 
 console.log(arr)
-const [frist, secound ] = resturent.categories;
-console.log(frist,secound);
+const [frist, , secound ] = resturent.categories;
+console.log(frist ,secound);
 
