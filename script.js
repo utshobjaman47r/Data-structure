@@ -35,127 +35,227 @@ const resturent = {
     orderPasta : function(ing1, ing2, ing3){
         console.log(`here is your delicious pasta with the ingrediant ${ing1}, ${ing2}, ${ing3}`)
 
+    },
+    orderPizza : function(mainIngediant , ...otheringrediant){
+        console.log(mainIngediant);
+        console.log(otheringrediant);
+
+
     }
 
 }
 
-resturent.orderDelevery({
-    time :"22 :30",
-    address :"siru bahiar paher basaye",
-    starterIndex :2,
-    mainIndex:2,
-})
+resturent.numGuest = 0;
+const guest = resturent.numGuest || 10 ;
 
-resturent.orderDelevery({
-     address :"siru bahiar paher basaye",
-     starterIndex :1,
-})
+console.log(guest);
 
 
-const {name,openingHour, categories}  = resturent; 
-// console.log(name,openingHour,categories);
+const correctGuest =  resturent.numGuest ?? 10;
+
+console.log(correctGuest);
 
 
 
-const {name : resturentName  , openingHour : times, categories : tags } = resturent;
-
-// console.log(resturentName,times,tags);
 
 
-// Defoult values 
- const { menu = [], startMenu : staters =[]} =resturent ;
+// console.log("ami" || 5);
+// console.log("" || "utshob");
+// console.log( true || 0);
+// console.log(undefined || null);
+
+
+// console.log( undefined    || 0 || "hello world " || " null" || 23 );
+
+
+// resturent.numGuest = 250
+// const guest1 = resturent.numGuest ? resturent.numGuest : 10
+
+// console.log(guest1);
+// const guest2 =resturent.numGuest || 10 ;
+   
+// console.log(guest2);
  
-// console.log(menu,staters);
 
-// meautating variables 
+// console.log("---and---");
 
-let a = 111;
-let b = 999;
+// console.log(0 && 250 );
 
-const obj = {a:23,b:45,c:14};
-//  or we can write like this 
-// a = obj.a ;
-// b = obj.b;
-({a,b} = obj)
-// nested objects 
+// console.log(null && "utshob");
 
-const{fri:{open : oM , close :tX}} = openingHour; 
+// console.log("utshob" && "is the villain ");
 
-// console.log(oM,tX );
+// console.log(55 && "utshob" && 33); 
 
+// console.log("hello" && 23 && null && "UTSHOB ")
 
-const arr = [7,8,9];
-const batArr =[1,2,3,arr[0],arr[1],arr[2]];
-console.log(batArr)
-
-const newArr =[1,2,3,...arr];
-// console.log(newArr);
-
-// console.log(...newArr);
+// if(resturent.orderPizza ){
+//     resturent.orderPizza("moshoom " , "RC");
+// };
 
 
-const mainMenuCopy = [...resturent.mainManu];
+// resturent.orderPizza && resturent.orderPizza("moshrom", "RC", "POTETO CHIPSCE ") 
 
-// const newItem = [...resturent.mainManu,"allu votta", "dim vaji "]   ;
-// console.log(newItem);
-const manu = [...resturent.mainManu,...resturent.startMenu];
+// console.log("utshob" || "Delali park " || null);
 
-// console.log(manu)
+// console.log(null|| undefined || "justeen");
+
+// console.log(undefined || null || 0);
+
+// console.log(22 && 22);
+
+// console.log(0 && 2502502 );
+
+// console.log(22 && 0);
 
 
 
 
-const nameOf =  "uthsob "; 
-const letters = [...nameOf];
-// console.log(...nameOf);
+// resturent.orderDelevery({
+//     time :"22 :30",
+//     address :"siru bahiar paher basaye",
+//     starterIndex :2,
+//     mainIndex:2,
+// })
 
-// const ingredinet = [prompt("lets make a pastha with ingredianet 1"),prompt('lets make a pastha with ingredianet 2'), 
-//     prompt("lets make a pastha with ingredianet 3")
-// ];
-
-// console.log(ingredinet);
-
-// resturent.orderPasta(ingredinet[0],ingredinet,[1],ingredinet[2]);
-
-// resturent.orderPasta(...ingredinet);
-
-const newResturent ={founding:1999,...resturent,funder: "jemes chlonoskie "};
-
-// console.log(newResturent);
-
-const resturentCopy = {...resturent};
-
-resturentCopy.name = "Denali park and restrent ";
-
-// console.log(resturentCopy.name);
-// console.log(resturent.name); 
-//spred oparator
-const something =  [1,2,3,4,...[50,60,70,80,90]];
-
-console.log(something);
+// resturent.orderDelevery({
+//      address :"siru bahiar paher basaye",
+//      starterIndex :1,
+// })
 
 
-const batStack =  [9,1,9,3,9,...['I am BATMAN']];
+// const {name,openingHour, categories}  = resturent; 
+// // console.log(name,openingHour,categories);
 
 
-console.log(batStack);
 
-const [superMan, Batman,...other] =['KRYPTONYTE SPARE ', 'BATMOBILE', 'OMEGA BINGS', 'MOINER ' , 'INFINITY GONTLENT '];
+// const {name : resturentName  , openingHour : times, categories : tags } = resturent;
 
-console.log(superMan,Batman,other);
-
-
-// const pet = ["dogs","cats ","birds"];
-
-// const wishList = ["cows","ships ", "African Bafello"];
-
-// pet.push.apply(pet,wishList);
-//  pet.push(...wishList);
+// // console.log(resturentName,times,tags);
 
 
-// console.log(pet);
+// // Defoult values 
+//  const { menu = [], startMenu : staters =[]} =resturent ;
+ 
+// // console.log(menu,staters);
 
-const newMenu  =[...resturent.mainManu, "beef kabab "];
+// // meautating variables 
+
+// let a = 111;
+// let b = 999;
+
+// const obj = {a:23,b:45,c:14};
+// //  or we can write like this 
+// // a = obj.a ;
+// // b = obj.b;
+// ({a,b} = obj)
+// // nested objects 
+
+// const{fri:{open : oM , close :tX}} = openingHour; 
+
+// // console.log(oM,tX );
+
+
+// const arr = [7,8,9];
+// const batArr =[1,2,3,arr[0],arr[1],arr[2]];
+// console.log(batArr)
+
+// const newArr =[1,2,3,...arr];
+// // console.log(newArr);
+
+// // console.log(...newArr);
+
+
+// const mainMenuCopy = [...resturent.mainManu];
+
+// // const newItem = [...resturent.mainManu,"allu votta", "dim vaji "]   ;
+// // console.log(newItem);
+// const manu = [...resturent.mainManu,...resturent.startMenu];
+
+// // console.log(manu)
+
+
+
+// resturent.orderPizza("mushroom","onion ", "oliver","sapnish");
+// resturent.orderPizza("mushroom")
+ 
+
+// const nameOf =  "uthsob " ; 
+// const letters = [...nameOf];
+
+
+
+
+// // console.log(...nameOf);
+
+// // const ingredinet = [prompt("lets make a pastha with ingredianet 1"),prompt('lets make a pastha with ingredianet 2'), 
+// //     prompt("lets make a pastha with ingredianet 3")
+// // ];
+
+// // console.log(ingredinet);
+
+// // resturent.orderPasta(ingredinet[0],ingredinet,[1],ingredinet[2]);
+
+// // resturent.orderPasta(...ingredinet);
+
+// const newResturent ={founding:1999,...resturent,funder: "jemes chlonoskie "};
+
+// // console.log(newResturent);
+
+// const resturentCopy = {...resturent};
+
+// resturentCopy.name = "Denali park and restrent ";
+
+// // console.log(resturentCopy.name);
+// // console.log(resturent.name); 
+// //spred oparator
+
+
+
+// const [Pizza, ,Risoto,...otherfood ] = [...resturent.mainManu, ...resturent.startMenu];
+
+// // console.log(Pizza,Risoto,otherfood);
+
+// //objects
+
+
+// const {sat,...weekdays} = resturent.openingHour;
+// // console.log(weekdays) ;
+
+
+// const porerty = {
+//     cars : "mz9",
+//     hosue : "bari,gor , and fram hosue ",
+//     bikes : "dirt bikes"
+// };
+
+
+// const {cars,...otherProperty} = porerty;
+// // console.log( cars,otherProperty); 
+
+
+// const add  = function(...number){
+//     let sum = 0;
+//     for(let i = 0; i< number.length; i++ ) sum+=number[i];
+//     console.log(sum);
+
+ 
+// }
+
+// add(5,6,8,);
+
+// add(4,6,8,9,5,3,2,3,);
+
+// add(1,2,3,45,90);
+
+// const x = [50,50,50];
+// add(...x);  
+
+// const t =[50,36];
+// add(...t);
+
+
+// const newMenu  =[...resturent.mainManu, "beef kabab "];
 // console.log(newMenu);
 
 // let a = 111;
@@ -248,3 +348,12 @@ const newMenu  =[...resturent.mainManu, "beef kabab "];
 
 // console.log(name); // "Alice"
 // console.log(age);  // 30
+
+
+const something  = ['cars ', 'mobile', 'cattles ', 'computers ', 'tv', 'tools', 'bike ','house','lands'];
+
+for(let x = 0; x <something.length; x++ ){
+    
+    // console.log(something[x])
+
+}
