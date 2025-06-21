@@ -1,59 +1,99 @@
-"use strict"
+// "use strict"
 
-const resturent = {
-    name : 'classico Italino ',
-    locaiton :'via angelo Tavanti 23, firenze , Italy',
-    categories : ['Italian ', 'Pizzeria', 'Vegetarian ', 'organic '],
-    startMenu :['Focaccia ', 'Bruschetta ', 'Garlic', 'Bread ', 'cprese salad '],
-    mainManu : ['Pizza', 'pasta ',"Risoto"], 
-    openingHour :{
-        thu:{
-            open : 12,
-            close : 22 
-        },
-        fri :{
-            open : 11,
-            close: 23
-        },
-        sat :{
-            open :0,
-            close :24
-        }
+// const resturent = {
+//     name : 'classico Italino ',
+//     locaiton :'via angelo Tavanti 23, firenze , Italy',
+//     categories : ['Italian ', 'Pizzeria', 'Vegetarian ', 'organic '],
+//     startMenu :['Focaccia ', 'Bruschetta ', 'Garlic', 'Bread ', 'cprese salad '],
+//     mainManu : ['Pizza', 'pasta ',"Risoto"], 
+//     openingHour :{
+//         thu:{
+//             open : 12,
+//             close : 22 
+//         },
+//         fri :{
+//             open : 11,
+//             close: 23
+//         },
+//         sat :{
+//             open :0,
+//             close :24
+//         }
 
-    },
-    order :function(starterIndex,mainIndex){
-        return [this.startMenu[starterIndex],this.mainManu[mainIndex]];
+//     },
+//     order :function(starterIndex,mainIndex){
+//         return [this.startMenu[starterIndex],this.mainManu[mainIndex]];
 
-    },
+//     },
     
-    orderDelevery : function({starterIndex = 1,mainIndex = 0,address, time= "2:00" }){
-        console.log(`order received ${this.startMenu[starterIndex]} and ${this.mainManu[mainIndex]} 
-            on the place ${address} at ${time}`);
+//     orderDelevery : function({starterIndex = 1,mainIndex = 0,address, time= "2:00" }){
+//         console.log(`order received ${this.startMenu[starterIndex]} and ${this.mainManu[mainIndex]} 
+//             on the place ${address} at ${time}`);
 
-    },  
+//     },  
      
-    orderPasta : function(ing1, ing2, ing3){
-        console.log(`here is your delicious pasta with the ingrediant ${ing1}, ${ing2}, ${ing3}`)
+//     orderPasta : function(ing1, ing2, ing3){
+//         console.log(`here is your delicious pasta with the ingrediant ${ing1}, ${ing2}, ${ing3}`)
 
-    },
-    orderPizza : function(mainIngediant , ...otheringrediant){
-        console.log(mainIngediant);
-        console.log(otheringrediant);
-
-
-    }
-
-}
-
-resturent.numGuest = 0;
-const guest = resturent.numGuest || 10 ;
-
-console.log(guest);
+//     },
+//     orderPizza : function(mainIngediant , ...otheringrediant){
+//         console.log(mainIngediant);
+//         console.log(otheringrediant);
 
 
-const correctGuest =  resturent.numGuest ?? 10;
+//     }
 
-console.log(correctGuest);
+// }
+
+
+// const resturent1 ={
+//     name : "the eting store ",
+//     //numGuest : 10,
+//     numGuest : 0,
+// } ;
+
+// const resturent2 =  {
+//     name : "fatisto resturant .23",
+//     owner : "barobudos antenio ",
+// };
+
+// // resturent1.numGuest =  resturent1.numGuest || 10;  // in this line the or oparator did not find any kind  valuse  means 
+// // // false 
+// // //  so it sift to the next valuse 
+// // resturent2.numGuest = resturent2.numGuest  || 10; // where it  finds the vale 20 so it is turehy so it didnot jump to next 
+
+// // or assignment oppartor 
+// //resturent1.numGuest ||= 10;
+// // resturent2.numGuest ||= 10 ;
+
+// // nullish assignment oparator 
+// resturent1.numGuest ??=10;
+// resturent2.numGuest ??=10;
+
+// // and assingment oparator 
+// // resturent1.owner = resturent.owner && "<Anoynomious>"
+// // resturent2.owner = resturent2.owner && "<Anoynomious>"
+
+
+// resturent1.owner &&= "<Anoynomious>"
+// resturent2.owner &&= "<Anoynomious>"
+
+// console.log(resturent1);
+// console.log(resturent2);
+
+
+
+
+
+// resturent.numGuest = 0;
+// const guest = resturent.numGuest || 10 ;
+
+// console.log(guest);
+
+
+// const correctGuest =  resturent.numGuest ?? 10;
+
+// console.log(correctGuest);
 
 
 
@@ -350,10 +390,170 @@ console.log(correctGuest);
 // console.log(age);  // 30
 
 
-const something  = ['cars ', 'mobile', 'cattles ', 'computers ', 'tv', 'tools', 'bike ','house','lands'];
+// const something  = ['cars ', 'mobile', 'cattles ', 'computers ', 'tv', 'tools', 'bike ','house','lands'];
 
-for(let x = 0; x <something.length; x++ ){
+// for(let x = 0; x <something.length; x++ ){
     
-    // console.log(something[x])
+//     // console.log(something[x])
 
+// }
+
+
+
+const game = {
+  team1: 'Bayern Munich',
+  team2: 'Borrussia Dortmund',
+  players: [
+    [
+      'Neuer',
+      'Pavard',
+      'Martinez',
+      'Alaba',
+      'Davies',
+      'Kimmich',
+      'Goretzka',
+      'Coman',
+      'Muller',
+      'Gnarby',
+      'Lewandowski',
+    ],
+    [
+      'Burki',
+      'Schulz',
+      'Hummels',
+      'Akanji',
+      'Hakimi',
+      'Weigl',
+      'Witsel',
+      'Hazard',
+      'Brandt',
+      'Sancho',
+      'Gotze',
+    ],
+  ],
+  score: '4:0',
+  scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
+  date: 'Nov 9th, 2037',
+  odds: {
+    team1: 1.33,
+    x: 3.25, 
+    team2: 6.5,
+  },
+};
+
+const player1 =[ 
+      'Neuer',
+      'Pavard',
+      'Martinez',
+      'Alaba',
+      'Davies',
+      'Kimmich',
+      'Goretzka',
+      'Coman',
+      'Muller',
+      'Gnarby',
+      'Lewandowski',
+    
+];
+
+
+const player2 = [
+      'Burki',
+      'Schulz',
+      'Hummels',
+      'Akanji',
+      'Hakimi',
+      'Weigl',
+      'Witsel',
+      'Hazard',
+      'Brandt',
+      'Sancho',
+      'Gotze',
+
+];
+
+const [players1 ,players2 ] = game.players;
+
+console.log(players1,players2);
+
+const gk1 = player1[0];
+const filedPlayers = [player1[1],player1[2],player1[3],player1[4],player1[5],player1[6],player1[7],player1[8],player1[9],player1[10]];
+
+console.log("goal keeper team 1 :",gk1);
+
+console.log("fild player tam 2 :",filedPlayers);
+
+const allPlayers = [...player1,...player2];
+
+console.log("ALL PLAYERS AT ONE ",allPlayers);
+
+
+const subPlayer = ["thiago ", "couthinho ", "persic "];
+
+const player1Final = [...allPlayers,...subPlayer];
+
+console.log(player1Final);
+
+
+// const {odds={team1,x ,team2}} =game;
+// console.log(team1,team2,x);
+
+
+const {odds:{team1,x :draw ,team2}} =game;
+console.log(team1,team2,draw);
+
+
+const user = {
+  name :'max heachman ', 
+  id   :'20242024' ,
+  age  : 45,  
+}
+
+const  age = user.age; 
+
+console.log(age);
+
+
+
+const userTx ={
+  name :"jonathosn ",
+  age : 45,
+  id : "54547852",
+  tx : "the bing one of the best thing that can ",
+};
+
+const {name , id , tx } = userTx;
+console.log(name, id, tx );
+
+const  user0 = {
+  name : "gork",
+  age  :  "20",
+  id   : "25045txz20.3", 
+  educaiton : {
+    degree : "masters", 
+    instutituitons : "East west University ",
+  },
+}
+
+const { educaiton :{degree,instutituitons}} = user0;
+console.log(degree, instutituitons);
+
+
+
+const add = function(...number){
+  let sum =0;
+  for(let i =0; i<number.length; i++) sum += number[i]
+  console.log(sum);
+
+
+
+};
+
+add(5,5);
+add(40,50,60,20,63,50)
+add(45,42,89,62,12,28);
+add(544,785,96,44);
+
+const printGoals = function(...players){
+  
 }
