@@ -441,119 +441,186 @@ const game = {
   },
 };
 
-const player1 =[ 
-      'Neuer',
-      'Pavard',
-      'Martinez',
-      'Alaba',
-      'Davies',
-      'Kimmich',
-      'Goretzka',
-      'Coman',
-      'Muller',
-      'Gnarby',
-      'Lewandowski',
+// const player1 =[ 
+//       'Neuer',
+//       'Pavard',
+//       'Martinez',
+//       'Alaba',
+//       'Davies',
+//       'Kimmich',
+//       'Goretzka',
+//       'Coman',
+//       'Muller',
+//       'Gnarby',
+//       'Lewandowski',
     
-];
+// ];
 
 
-const player2 = [
-      'Burki',
-      'Schulz',
-      'Hummels',
-      'Akanji',
-      'Hakimi',
-      'Weigl',
-      'Witsel',
-      'Hazard',
-      'Brandt',
-      'Sancho',
-      'Gotze',
+// const player2 = [
+//       'Burki',
+//       'Schulz',
+//       'Hummels',
+//       'Akanji',
+//       'Hakimi',
+//       'Weigl',
+//       'Witsel',
+//       'Hazard',
+//       'Brandt',
+//       'Sancho',
+//       'Gotze',
 
-];
+// ];
 
 const [players1 ,players2 ] = game.players;
 
 console.log(players1,players2);
 
-const gk1 = player1[0];
-const filedPlayers = [player1[1],player1[2],player1[3],player1[4],player1[5],player1[6],player1[7],player1[8],player1[9],player1[10]];
+// const gk1 = player1[0];
+// const filedPlayers = [player1[1],player1[2],player1[3],player1[4],player1[5],
+// player1[6],player1[7],player1[8],player1[9],player1[10]];
 
-console.log("goal keeper team 1 :",gk1);
+// console.log("goal keeper team 1 :",gk1);
 
-console.log("fild player tam 2 :",filedPlayers);
+const [gk,...filedPlayers] = players1;
 
-const allPlayers = [...player1,...player2];
+const allPlayers =[...players1,...players2];
 
-console.log("ALL PLAYERS AT ONE ",allPlayers);
+console.log(allPlayers);
 
 
-const subPlayer = ["thiago ", "couthinho ", "persic "];
+const players1final =[...players1, "thiago","chuthino", "persisic" ];
+console.log(players1final); 
 
-const player1Final = [...allPlayers,...subPlayer];
 
-console.log(player1Final);
+  // 5
+const {odds :{team1, x :draw,team2}} = game;
+console.log(team1,draw,team2); 
+
+
+// 6 
+
+const printGoals = function(...players){
+  console.log(`${players.length}, goals ware scored `)
+
+};
+
+printGoals("Daveis", "mullar","lewandoski","kimich");
+printGoals("Daveis", "mullar");
+
+printGoals(...game.score);
+
+
+
+
+
+
+
+//  let [gk,...filedPlayers] = players2;
+
+// console.log("fild player tam 2 :",filedPlayers);
+
+// const allPlayers = [...player1,...player2];
+
+// console.log("ALL PLAYERS AT ONE ",allPlayers);
+
+
+// const subPlayer = ["thiago ", "couthinho ", "persic "];
+
+// const player1Final = [...allPlayers,...subPlayer];
+
+// console.log(player1Final);
 
 
 // const {odds={team1,x ,team2}} =game;
 // console.log(team1,team2,x);
 
 
-const {odds:{team1,x :draw ,team2}} =game;
-console.log(team1,team2,draw);
+// const {odds:{team1,x :draw ,team2}} =game;
+// console.log(team1,team2,draw);
 
 
-const user = {
-  name :'max heachman ', 
-  id   :'20242024' ,
-  age  : 45,  
-}
+// const user = {
+//   name :'max heachman ', 
+//   id   :'20242024' ,
+//   age  : 45,  
+// }
 
-const  age = user.age; 
+// const  age = user.age; 
 
-console.log(age);
-
-
-
-const userTx ={
-  name :"jonathosn ",
-  age : 45,
-  id : "54547852",
-  tx : "the bing one of the best thing that can ",
-};
-
-const {name , id , tx } = userTx;
-console.log(name, id, tx );
-
-const  user0 = {
-  name : "gork",
-  age  :  "20",
-  id   : "25045txz20.3", 
-  educaiton : {
-    degree : "masters", 
-    instutituitons : "East west University ",
-  },
-}
-
-const { educaiton :{degree,instutituitons}} = user0;
-console.log(degree, instutituitons);
+// console.log(age);
 
 
 
-const add = function(...number){
-  let sum =0;
-  for(let i =0; i<number.length; i++) sum += number[i]
-  console.log(sum);
+// const userTx ={
+//   name :"jonathosn ",
+//   age : 45,
+//   id : "54547852",
+//   tx : "the bing one of the best thing that can ",
+// };
+
+// const {name , id , tx } = userTx;
+// console.log(name, id, tx );
+
+// const  user0 = {
+//   name : "gork",
+//   age  :  "20",
+//   id   : "25045txz20.3", 
+//   educaiton : {
+//     degree : "masters", 
+//     instutituitons : "East west University ",
+//   },
+// }
+
+// const { educaiton :{degree,instutituitons}} = user0;
+// console.log(degree, instutituitons);
 
 
 
-};
+// const add = function(...number){
+//   let sum =0;
+//   for(let i =0; i<number.length; i++) sum += number[i]
+//   console.log(sum);
 
-add(5,5);
-add(40,50,60,20,63,50)
-add(45,42,89,62,12,28);
-add(544,785,96,44);
 
-const printGoals = function(...players){
+
+// };
+
+// add(5,5);
+// add(40,50,60,20,63,50)
+// add(45,42,89,62,12,28);
+// add(544,785,96,44);
+
+// const printGoals = function(...players){
   
+// }
+
+// const myPets = ["cows","dogs","chikens "];
+
+// const myWish =[...myPets,"horse","birds"];
+
+// console.log(myWish);
+
+// const supGame =[[1,2,3,4,5,6],[7,8,9,10,11,12,13,14]];
+
+// const [batGame,flashGame] =supGame;
+// console.log(batGame,flashGame);
+// const arr = [["batman","godzilla", "adheera","garuda ","vallal dev "],["deathsotek" ,"kancha"]]
+
+// const [teamA,teamB] = arr;
+// console.log(teamA);
+// console.log(teamB);
+
+
+const fruits = ["apple","banana","cherry"];
+
+for(let i =0; i<20;i++){
+  console.log(fruits[i % fruits.length]);
+}
+
+
+const myApps =["vscode","github","safari","yahoo","twitter"];
+
+for(const apps of myApps){
+  console.log(apps)
 }
