@@ -1,7 +1,7 @@
 "use strict"
 
 
-const weekdays = ["mon","twes","wed","ths","fri","sat","son" ];
+const weekdays = ["mon","twes","wed","ths","fri","sat","son" ]; 
 
   const openingHour ={
         [weekdays[3]]:{
@@ -12,8 +12,8 @@ const weekdays = ["mon","twes","wed","ths","fri","sat","son" ];
             open : 11,
             close: 23
         },
-        [`days-${2+4}`] :{
-            open :0,
+        [weekdays[5]] :{
+            open :0 ,
             close :24
         }
 
@@ -52,6 +52,40 @@ const resturent = {
     }
 
 };
+
+if( resturent.openingHour && resturent.openingHour.mon){
+    console.log(resturent.openingHour.mon.open);
+
+};
+
+
+console.log(resturent.openingHour.mon?.open);
+console.log(resturent.openingHour?.mon?.open);
+
+// Example 
+const days = ["mon","twes","wed","ths","fri","sat","son" ]; 
+
+for(const day of days ) {
+
+    const open = resturent.openingHour[day]?.open || "closed";
+    console.log(`on   ${day}, we open at ${open}`);
+
+
+}
+//  methods
+
+console.log(resturent.order?.(0,1) ?? "this method is not exist ") 
+console.log(resturent.orderKalavuna ?.(0,1) ?? "this method is not exist ") 
+
+
+
+// if(resturent.openingHour.fri){
+//     console.log(resturent.openingHour.fri.open);
+
+// }
+
+
+
 
 
 // const menu = [...resturent.startMenu,...resturent.mainManu];
