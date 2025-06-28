@@ -1,42 +1,50 @@
 "use strict"
 
+
+const weekdays = ["mon","twes","wed","ths","fri","sat","son" ];
+
+  const openingHour ={
+        [weekdays[3]]:{
+            open : 12,
+            close : 22 
+        },
+        [weekdays[4]] :{
+            open : 11,
+            close: 23
+        },
+        [`days-${2+4}`] :{
+            open :0,
+            close :24
+        }
+
+    };
+
+
 const resturent = {
     name : 'classico Italino ',
     locaiton :'via angelo Tavanti 23, firenze , Italy',
     categories : ['Italian ', 'Pizzeria', 'Vegetarian ', 'organic '],
     startMenu :['Focaccia ', 'Bruschetta ', 'Garlic', 'Bread ', 'cprese salad '],
     mainManu : ['Pizza', 'pasta ',"Risoto"], 
-    openingHour :{
-        thu:{
-            open : 12,
-            close : 22 
-        },
-        fri :{
-            open : 11,
-            close: 23
-        },
-        sat :{
-            open :0,
-            close :24
-        }
-
-    },
-    order :function(starterIndex,mainIndex){
+// ES6 enhanced object litarals 
+    openingHour,
+  
+    order(starterIndex,mainIndex){
         return [this.startMenu[starterIndex],this.mainManu[mainIndex]];
 
     },
     
-    orderDelevery : function({starterIndex = 1,mainIndex = 0,address, time= "2:00" }){
+    orderDelevery({starterIndex = 1,mainIndex = 0,address, time= "2:00" }){
         console.log(`order received ${this.startMenu[starterIndex]} and ${this.mainManu[mainIndex]} 
             on the place ${address} at ${time}`);
 
     },  
      
-    orderPasta : function(ing1, ing2, ing3){
+    orderPasta(ing1, ing2, ing3){
         console.log(`here is your delicious pasta with the ingrediant ${ing1}, ${ing2}, ${ing3}`)
 
     },
-    orderPizza : function(mainIngediant , ...otheringrediant){
+    orderPizza(mainIngediant , ...otheringrediant){
         console.log(mainIngediant);
         console.log(otheringrediant);
 
@@ -46,17 +54,17 @@ const resturent = {
 };
 
 
-const menu = [...resturent.startMenu,...resturent.mainManu];
+// const menu = [...resturent.startMenu,...resturent.mainManu];
 
- console.log(menu);
+//  console.log(menu);
 
 
- for(const item of menu){
-    console.log(item);
- }
- for(const [i,el] of menu.entries()){
-    console.log(`${i + 1} : ${el}`);
- };
+//  for(const item of menu){
+//     console.log(item);
+//  }
+//  for(const [i,el] of menu.entries()){
+//     console.log(`${i + 1} : ${el}`);
+//  };
 
 //  console.log([...menu.entries()]);
 
