@@ -1,49 +1,70 @@
-// "use strict"
+"use strict"
 
-// const resturent = {
-//     name : 'classico Italino ',
-//     locaiton :'via angelo Tavanti 23, firenze , Italy',
-//     categories : ['Italian ', 'Pizzeria', 'Vegetarian ', 'organic '],
-//     startMenu :['Focaccia ', 'Bruschetta ', 'Garlic', 'Bread ', 'cprese salad '],
-//     mainManu : ['Pizza', 'pasta ',"Risoto"], 
-//     openingHour :{
-//         thu:{
-//             open : 12,
-//             close : 22 
-//         },
-//         fri :{
-//             open : 11,
-//             close: 23
-//         },
-//         sat :{
-//             open :0,
-//             close :24
-//         }
+const resturent = {
+    name : 'classico Italino ',
+    locaiton :'via angelo Tavanti 23, firenze , Italy',
+    categories : ['Italian ', 'Pizzeria', 'Vegetarian ', 'organic '],
+    startMenu :['Focaccia ', 'Bruschetta ', 'Garlic', 'Bread ', 'cprese salad '],
+    mainManu : ['Pizza', 'pasta ',"Risoto"], 
+    openingHour :{
+        thu:{
+            open : 12,
+            close : 22 
+        },
+        fri :{
+            open : 11,
+            close: 23
+        },
+        sat :{
+            open :0,
+            close :24
+        }
 
-//     },
-//     order :function(starterIndex,mainIndex){
-//         return [this.startMenu[starterIndex],this.mainManu[mainIndex]];
+    },
+    order :function(starterIndex,mainIndex){
+        return [this.startMenu[starterIndex],this.mainManu[mainIndex]];
 
-//     },
+    },
     
-//     orderDelevery : function({starterIndex = 1,mainIndex = 0,address, time= "2:00" }){
-//         console.log(`order received ${this.startMenu[starterIndex]} and ${this.mainManu[mainIndex]} 
-//             on the place ${address} at ${time}`);
+    orderDelevery : function({starterIndex = 1,mainIndex = 0,address, time= "2:00" }){
+        console.log(`order received ${this.startMenu[starterIndex]} and ${this.mainManu[mainIndex]} 
+            on the place ${address} at ${time}`);
 
-//     },  
+    },  
      
-//     orderPasta : function(ing1, ing2, ing3){
-//         console.log(`here is your delicious pasta with the ingrediant ${ing1}, ${ing2}, ${ing3}`)
+    orderPasta : function(ing1, ing2, ing3){
+        console.log(`here is your delicious pasta with the ingrediant ${ing1}, ${ing2}, ${ing3}`)
 
-//     },
-//     orderPizza : function(mainIngediant , ...otheringrediant){
-//         console.log(mainIngediant);
-//         console.log(otheringrediant);
+    },
+    orderPizza : function(mainIngediant , ...otheringrediant){
+        console.log(mainIngediant);
+        console.log(otheringrediant);
 
 
-//     }
+    }
 
-// }
+};
+
+
+const menu = [...resturent.startMenu,...resturent.mainManu];
+
+ console.log(menu);
+
+
+ for(const item of menu){
+    console.log(item);
+ }
+ for(const [i,el] of menu.entries()){
+    console.log(`${i + 1} : ${el}`);
+ };
+
+//  console.log([...menu.entries()]);
+
+
+
+
+
+
 
 
 // const resturent1 ={
@@ -398,124 +419,6 @@
 
 // }
 
-
-
-const game = {
-  team1: 'Bayern Munich',
-  team2: 'Borrussia Dortmund',
-  players: [
-    [
-      'Neuer',
-      'Pavard',
-      'Martinez',
-      'Alaba',
-      'Davies',
-      'Kimmich',
-      'Goretzka',
-      'Coman',
-      'Muller',
-      'Gnarby',
-      'Lewandowski',
-    ],
-    [
-      'Burki',
-      'Schulz',
-      'Hummels',
-      'Akanji',
-      'Hakimi',
-      'Weigl',
-      'Witsel',
-      'Hazard',
-      'Brandt',
-      'Sancho',
-      'Gotze',
-    ],
-  ],
-  score: '4:0',
-  scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
-  date: 'Nov 9th, 2037',
-  odds: {
-    team1: 1.33,
-    x: 3.25, 
-    team2: 6.5,
-  },
-};
-
-// const player1 =[ 
-//       'Neuer',
-//       'Pavard',
-//       'Martinez',
-//       'Alaba',
-//       'Davies',
-//       'Kimmich',
-//       'Goretzka',
-//       'Coman',
-//       'Muller',
-//       'Gnarby',
-//       'Lewandowski',
-    
-// ];
-
-
-// const player2 = [
-//       'Burki',
-//       'Schulz',
-//       'Hummels',
-//       'Akanji',
-//       'Hakimi',
-//       'Weigl',
-//       'Witsel',
-//       'Hazard',
-//       'Brandt',
-//       'Sancho',
-//       'Gotze',
-
-// ];
-
-const [players1 ,players2 ] = game.players;
-
-console.log(players1,players2);
-
-// const gk1 = player1[0];
-// const filedPlayers = [player1[1],player1[2],player1[3],player1[4],player1[5],
-// player1[6],player1[7],player1[8],player1[9],player1[10]];
-
-// console.log("goal keeper team 1 :",gk1);
-
-const [gk,...filedPlayers] = players1;
-
-const allPlayers =[...players1,...players2];
-
-console.log(allPlayers);
-
-
-const players1final =[...players1, "thiago","chuthino", "persisic" ];
-console.log(players1final); 
-
-
-  // 5
-const {odds :{team1, x :draw,team2}} = game;
-console.log(team1,draw,team2); 
-
-
-// 6 
-
-const printGoals = function(...players){
-  console.log(`${players.length}, goals ware scored `)
-
-};
-
-printGoals("Daveis", "mullar","lewandoski","kimich");
-printGoals("Daveis", "mullar");
-
-printGoals(...game.score);
-
-
-
-
-
-
-
 //  let [gk,...filedPlayers] = players2;
 
 // console.log("fild player tam 2 :",filedPlayers);
@@ -612,15 +515,137 @@ printGoals(...game.score);
 // console.log(teamB);
 
 
-const fruits = ["apple","banana","cherry"];
+// const fruits = ["apple","banana","cherry"];
 
-for(let i =0; i<20;i++){
-  console.log(fruits[i % fruits.length]);
-}
+// for(let i =0; i<20;i++){
+//   console.log(fruits[i % fruits.length]);
+// }
 
 
-const myApps =["vscode","github","safari","yahoo","twitter"];
+// const myApps =["vscode","github","safari","yahoo","twitter"];
 
-for(const apps of myApps){
-  console.log(apps)
-}
+// for(const apps of myApps){
+//   console.log(apps)
+// }
+
+
+// const women  = {
+//   name :"urbashi",
+//   age : '22',
+//   hight : "5.7",
+//   home : "deli "
+// };
+
+
+// for(const womss in women){
+//   console.log(women[womss])
+// };
+// const game = {
+//   team1: 'Bayern Munich',
+//   team2: 'Borrussia Dortmund',
+//   players: [
+//     [
+//       'Neuer',
+//       'Pavard',
+//       'Martinez',
+//       'Alaba',
+//       'Davies',
+//       'Kimmich',
+//       'Goretzka',
+//       'Coman',
+//       'Muller',
+//       'Gnarby',
+//       'Lewandowski',
+//     ],
+//     [
+//       'Burki',
+//       'Schulz',
+//       'Hummels',
+//       'Akanji',
+//       'Hakimi',
+//       'Weigl',
+//       'Witsel',
+//       'Hazard',
+//       'Brandt',
+//       'Sancho',
+//       'Gotze',
+//     ],
+//   ],
+//   score: '4:0',
+//   scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
+//   date: 'Nov 9th, 2037',
+//   odds: {
+//     team1: 1.33,
+//     x: 3.25, 
+//     team2: 6.5,
+//   },
+// };
+
+// // const player1 =[ 
+// //       'Neuer',
+// //       'Pavard',
+// //       'Martinez',
+// //       'Alaba',
+// //       'Davies',
+// //       'Kimmich',
+// //       'Goretzka',
+// //       'Coman',
+// //       'Muller',
+// //       'Gnarby',
+// //       'Lewandowski',
+    
+// // ];
+
+
+// // const player2 = [
+// //       'Burki',
+// //       'Schulz',
+// //       'Hummels',
+// //       'Akanji',
+// //       'Hakimi',
+// //       'Weigl',
+// //       'Witsel',
+// //       'Hazard',
+// //       'Brandt',
+// //       'Sancho',
+// //       'Gotze',
+
+// // ];
+
+// const [players1 ,players2 ] = game.players;
+
+// console.log(players1,players2);
+
+// // const gk1 = player1[0];
+// // const filedPlayers = [player1[1],player1[2],player1[3],player1[4],player1[5],
+// // player1[6],player1[7],player1[8],player1[9],player1[10]];
+
+// // console.log("goal keeper team 1 :",gk1);
+
+// const [gk,...filedPlayers] = players1;
+
+// const allPlayers =[...players1,...players2];
+
+// console.log(allPlayers);
+
+
+// const players1final =[...players1, "thiago","chuthino", "persisic" ];
+// console.log(players1final); 
+
+
+//   // 5
+// const {odds :{team1, x :draw,team2}} = game;
+// console.log(team1,draw,team2); 
+
+
+// // 6 
+
+// const printGoals = function(...players){
+//   console.log(`${players.length}, goals ware scored `)
+
+// };
+
+// printGoals("Daveis", "mullar","lewandoski","kimich");
+// printGoals("Daveis", "mullar");
+
+// printGoals(...game.score);
