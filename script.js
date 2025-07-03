@@ -1,18 +1,18 @@
 "use strict"
 
 
-const weekdays = ["mon","twes","wed","ths","fri","sat","son" ]; 
+const weekdays = ["mon","twes","wed","thurs","fri","sat","son" ]; 
 
   const openingHour ={
-        [weekdays[3]]:{
+        thurs:{
             open : 12,
             close : 22 
         },
-        [weekdays[4]] :{
+        fri :{
             open : 11,
             close: 23
         },
-        [weekdays[5]] :{
+        sat :{
             open :0 ,
             close :24
         }
@@ -26,6 +26,7 @@ const resturent = {
     categories : ['Italian ', 'Pizzeria', 'Vegetarian ', 'organic '],
     startMenu :['Focaccia ', 'Bruschetta ', 'Garlic', 'Bread ', 'cprese salad '],
     mainManu : ['Pizza', 'pasta ',"Risoto"], 
+
 // ES6 enhanced object litarals 
     openingHour,
   
@@ -53,29 +54,79 @@ const resturent = {
 
 };
 
-if( resturent.openingHour && resturent.openingHour.mon){
-    console.log(resturent.openingHour.mon.open);
 
+if(resturent.openingHour.mon){
+    console.log(resturent.openingHour.mon.open);
 };
 
+if(resturent.openingHour && resturent.openingHour.mon){
+
+    console.log(resturent.openingHour.mon.open);
+};
+// console.log(resturent.openingHour.mon.open);
 
 console.log(resturent.openingHour.mon?.open);
 console.log(resturent.openingHour?.mon?.open);
 
-// Example 
-const days = ["mon","twes","wed","ths","fri","sat","son" ]; 
-
-for(const day of days ) {
-
-    const open = resturent.openingHour[day]?.open || "closed";
-    console.log(`on   ${day}, we open at ${open}`);
 
 
+
+const days =["mon","twes","wed","thurs","fri","sat","son" ]; 
+
+for(const day of days){
+
+    const oepn = resturent.openingHour[day]?.open ?? "closed "
+    console.log(`on ${day}, we open at ${oepn}`)
 }
-//  methods
 
-console.log(resturent.order?.(0,1) ?? "this method is not exist ") 
-console.log(resturent.orderKalavuna ?.(0,1) ?? "this method is not exist ") 
+
+// methods 
+
+console.log(resturent.orderMacMini?.(0,1) ?? "the method is not avialable")
+
+
+const users =[{
+    name : "uthsob",
+    email: "uthsobjaman2012@gmail.com"
+}];
+console.log(users[0]?.name ?? "uer arry is emty");
+
+
+
+
+
+
+// if(resturent.openingHour.fri){
+//     console.log(resturent.openingHour.fri.open);
+
+// }
+
+
+
+
+// if( resturent.openingHour && resturent.openingHour.mon){
+//     console.log(resturent.openingHour.mon.open);
+
+// };
+
+
+// console.log(resturent.openingHour.mon?.open);
+// console.log(resturent.openingHour?.mon?.open);
+
+// // Example 
+// const days = ["mon","twes","wed","ths","fri","sat","son" ]; 
+
+// for(const day of days ) {
+
+//     const open = resturent.openingHour[day]?.open || "closed";
+//     console.log(`on   ${day}, we open at ${open}`);
+
+
+// }
+// //  methods
+
+// console.log(resturent.order?.(0,1) ?? "this method is not exist ") 
+// console.log(resturent.orderKalavuna ?.(0,1) ?? "this method is not exist ") 
 
 
 
