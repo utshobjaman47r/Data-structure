@@ -55,41 +55,91 @@ const resturent = {
 };
 
 
-if(resturent.openingHour.mon){
-    console.log(resturent.openingHour.mon.open);
+// const properties = Object.keys(openingHour);
+// console.log(openingHour);
+
+// let openStr =`we are open on ${properties.length} days :`;
+
+
+// for( const days of properties ){
+//     openStr += `${days}`
+//  }
+//  console.log(openStr)
+
+const properties = Object.keys(openingHour);
+console.log(properties);
+let openstar = `we are open on ${properties.length} days : `
+console.log(openstar);
+
+for(const day of properties){
+      openstar += `${day}`
+
 };
 
-if(resturent.openingHour && resturent.openingHour.mon){
-
-    console.log(resturent.openingHour.mon.open);
-};
-// console.log(resturent.openingHour.mon.open);
-
-console.log(resturent.openingHour.mon?.open);
-console.log(resturent.openingHour?.mon?.open);
+console.log(openstar);
 
 
+const values =  Object.values(openingHour);
+console.log(values);
 
 
-const days =["mon","twes","wed","thurs","fri","sat","son" ]; 
+const entries = Object.entries(openingHour);
 
-for(const day of days){
 
-    const oepn = resturent.openingHour[day]?.open ?? "closed "
-    console.log(`on ${day}, we open at ${oepn}`)
+console.log(entries)
+
+// console.log(entries);
+
+for(const [key,{open,close}] of entries){
+    console.log(`on ${key}, we open at ${open} and close at ${close}`);
 }
 
 
-// methods 
-
-console.log(resturent.orderMacMini?.(0,1) ?? "the method is not avialable")
+  
 
 
-const users =[{
-    name : "uthsob",
-    email: "uthsobjaman2012@gmail.com"
-}];
-console.log(users[0]?.name ?? "uer arry is emty");
+
+
+
+
+
+
+
+// if(resturent.openingHour.mon){
+//     console.log(resturent.openingHour.mon.open);
+// };
+
+// if(resturent.openingHour && resturent.openingHour.mon){
+
+//     console.log(resturent.openingHour.mon.open);
+// };
+// // console.log(resturent.openingHour.mon.open);
+
+// console.log(resturent.openingHour.mon?.open);
+// console.log(resturent.openingHour?.mon?.open);
+
+
+
+
+// const days =["mon","twes","wed","thurs","fri","sat","son" ]; 
+
+// for(const day of days){
+
+//     const oepn = resturent.openingHour[day]?.open ?? "closed "
+//     console.log(`on ${day}, we open at ${oepn}`)
+// }
+
+
+// // methods 
+
+// console.log(resturent.orderMacMini?.(0,1) ?? "the method is not avialable")
+
+
+// const users =[{
+//     name : "uthsob",
+//     email: "uthsobjaman2012@gmail.com"
+// }];
+// console.log(users[0]?.name ?? "uer arry is emty");
 
 
 
