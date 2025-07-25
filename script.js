@@ -95,12 +95,76 @@ for(const [key,{open,close}] of entries){
 }
 
 
-  
+
+const orderSet = new Set(["pasta","pizza","risato", "pasta", "pizza","pizza","pasta"]);
+
+console.log(orderSet);
+
+console.log(new Set("lutfor jaman uthsob "))
+console.log(orderSet.size);
+console.log(orderSet.has("pasta"));
+console.log(orderSet.has("bread"));
+
+orderSet.delete("risato")
+orderSet.add("Garlic bread ");
+// orderSet.clear();
+console.log(orderSet);
+
+for(const x of orderSet){
+    console.log(x)
+}
+
+const stuff = ["waiter","chef","manager","chef","manager","chef","waiter","manager"];
+
+const stuffUnique = [...new Set(stuff)];
+
+console.log(stuffUnique);
+console.log(new Set(["waiter","chef","manager","chef","maneger","chef","waiter","manager"]).size); 
 
 
 
 
+// most importents maps 
 
+const rest = new Map();
+
+rest.set("name" , "clasico itlinio");
+rest.set(1,"Farncize, Italino ");
+console.log(rest.set(2,"liwbon portugal")); 
+
+
+rest.
+set("categories", ['Italian ', 'Pizzeria', 'Vegetarian ', 'organic '],) 
+.set("open", "11")
+.set("closed" , "23")
+.set(true,"we are open :D")
+.set(false,"we are clsoed :( ");
+
+rest.get("name")
+console.log(rest.get("name"));
+
+console.log(rest.get(true));
+
+console.log(rest.get(1));
+
+ const time = 21 ;
+
+ console.log(rest.get(time >rest.get("open") && time < rest.get("closed")));
+
+    
+ console.log(rest.has("categories"));
+
+ rest.delete(2);
+//  rest.clear();
+
+const arr = [1,2]
+rest.set(arr,"test")
+rest.set(document.querySelector("h1"),"heading");
+ console.log(rest);
+
+console.log(rest.size);
+
+console.log(rest.get(arr))
 
 
 
