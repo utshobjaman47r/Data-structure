@@ -55,6 +55,8 @@ const resturent = {
 };
 
 
+
+
 // const properties = Object.keys(openingHour);
 // console.log(openingHour);
 
@@ -164,7 +166,89 @@ rest.set(document.querySelector("h1"),"heading");
 
 console.log(rest.size);
 
-console.log(rest.get(arr))
+console.log(rest.get(arr));
+
+const question = new Map([
+    ["question" , "what is the best programming language in the world ?"],
+    [1, "c"],
+    [2,"java"],
+    [3,"javascirpt"],
+    ["correct",3],
+    [true,"correct "],
+    [false , "try agian ? "]
+
+
+])
+
+console.log(question);
+
+// convert object to map 
+console.log(Object.entries(openingHour));
+
+
+const HoursMap = new Map(Object.entries(openingHour));
+
+console.log(HoursMap);
+
+console.log(question.get("question"))
+for(const [key,value] of question){
+    if (typeof key === "number") {
+        console.log(`Answer ${key} : ${value}  `)
+        }
+}
+
+// const answer = Number(prompt("your answer "))
+
+const answer = 3;
+console.log(answer);
+
+ 
+
+
+console.log (question.get(question.get("correct") === answer));
+
+console.log(...question);
+// console.log(question.entries());
+console.log([...question.entries()]);
+console.log([...question.values()]);
+
+
+const orderiteam = new Set (["pasta","pizza", "risato","pizza","pasta","pizza"]);
+console.log(orderiteam);
+
+console.log(orderiteam.size);
+console.log(orderiteam.has("pizza"));
+console.log(orderiteam.has("bread"));
+
+orderiteam.add("garlic pizza");
+console.log(orderiteam)
+
+orderiteam.delete("risato")
+
+// orderiteam.clear();
+console.log(orderiteam); 
+
+
+for(const order of orderiteam){
+    console.log(order)
+};
+
+
+const staff = ["waiter","chef","waiter","meneger","chef"];
+
+const staffUnique =[...new Set(staff)];
+console.log(staffUnique);
+console.log(new Set(["waiter","chef","waiter","meneger","chef"]).size);
+
+
+
+
+// console.log(staffUnique);
+
+// console.log(new Set(["waiter","chef","waiter","meneger","chef"]).size);
+// console.log(staffUnique.size);
+
+ 
 
 
 
