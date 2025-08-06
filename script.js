@@ -54,6 +54,47 @@ const resturent = {
 
 };
 
+const restT = new Map();
+
+restT.set("name", "clacico italiano");
+
+restT.set(1,"maxican,  NOWWHARE");
+console.log(restT.set(2,"lisbon , portugal"));
+
+restT
+    .set("catagoris",['Italian ', 'Pizzeria', 'Vegetarian ', 'organic '])
+    .set("open", 11 )
+    .set("close",23)
+.set(true, "we are open :D")
+.set(false,"we are closed :(")
+
+console.log(restT.get("name"));
+console.log(restT.get(true));
+console.log(restT.get(1));
+
+const time = 21;
+
+console.log(restT.get(time>restT.get("open") && time < restT.get("close") ));
+
+console.log(restT.has("catagoris"));
+restT.delete(2);
+
+
+const arrT = [1,2];
+
+restT.set(arrT, "test");
+
+restT.set(document.querySelector('h1') , "Heading");
+
+// restT.clear()
+console.log(restT)
+
+console.log(restT.size)
+
+console.log(restT.get(arrT));
+
+
+
 
 
 
@@ -68,177 +109,177 @@ const resturent = {
 //  }
 //  console.log(openStr)
 
-const properties = Object.keys(openingHour);
-console.log(properties);
-let openstar = `we are open on ${properties.length} days : `
-console.log(openstar);
+// const properties = Object.keys(openingHour);
+// console.log(properties);
+// let openstar = `we are open on ${properties.length} days : `
+// console.log(openstar);
 
-for(const day of properties){
-      openstar += `${day}`
+// for(const day of properties){
+//       openstar += `${day}`
 
-};
+// };
 
-console.log(openstar);
-
-
-const values =  Object.values(openingHour);
-console.log(values);
+// console.log(openstar);
 
 
-const entries = Object.entries(openingHour);
+// const values =  Object.values(openingHour);
+// console.log(values);
 
 
-console.log(entries)
-
-// console.log(entries);
-
-for(const [key,{open,close}] of entries){
-    console.log(`on ${key}, we open at ${open} and close at ${close}`);
-}
+// const entries = Object.entries(openingHour);
 
 
+// console.log(entries)
 
-const orderSet = new Set(["pasta","pizza","risato", "pasta", "pizza","pizza","pasta"]);
+// // console.log(entries);
 
-console.log(orderSet);
-
-console.log(new Set("lutfor jaman uthsob "))
-console.log(orderSet.size);
-console.log(orderSet.has("pasta"));
-console.log(orderSet.has("bread"));
-
-orderSet.delete("risato")
-orderSet.add("Garlic bread ");
-// orderSet.clear();
-console.log(orderSet);
-
-for(const x of orderSet){
-    console.log(x)
-}
-
-const stuff = ["waiter","chef","manager","chef","manager","chef","waiter","manager"];
-
-const stuffUnique = [...new Set(stuff)];
-
-console.log(stuffUnique);
-console.log(new Set(["waiter","chef","manager","chef","maneger","chef","waiter","manager"]).size); 
+// for(const [key,{open,close}] of entries){
+//     console.log(`on ${key}, we open at ${open} and close at ${close}`);
+// }
 
 
 
+// const orderSet = new Set(["pasta","pizza","risato", "pasta", "pizza","pizza","pasta"]);
 
-// most importents maps 
+// console.log(orderSet);
 
-const rest = new Map();
+// console.log(new Set("lutfor jaman uthsob "))
+// console.log(orderSet.size);
+// console.log(orderSet.has("pasta"));
+// console.log(orderSet.has("bread"));
 
-rest.set("name" , "clasico itlinio");
-rest.set(1,"Farncize, Italino ");
-console.log(rest.set(2,"liwbon portugal")); 
+// orderSet.delete("risato")
+// orderSet.add("Garlic bread ");
+// // orderSet.clear();
+// console.log(orderSet);
+
+// for(const x of orderSet){
+//     console.log(x)
+// }
+
+// const stuff = ["waiter","chef","manager","chef","manager","chef","waiter","manager"];
+
+// const stuffUnique = [...new Set(stuff)];
+
+// console.log(stuffUnique);
+// console.log(new Set(["waiter","chef","manager","chef","maneger","chef","waiter","manager"]).size); 
 
 
-rest.
-set("categories", ['Italian ', 'Pizzeria', 'Vegetarian ', 'organic '],) 
-.set("open", "11")
-.set("closed" , "23")
-.set(true,"we are open :D")
-.set(false,"we are clsoed :( ");
 
-rest.get("name")
-console.log(rest.get("name"));
 
-console.log(rest.get(true));
+// // most importents maps 
 
-console.log(rest.get(1));
+// const rest = new Map();
 
- const time = 21 ;
+// rest.set("name" , "clasico itlinio");
+// rest.set(1,"Farncize, Italino ");
+// console.log(rest.set(2,"liwbon portugal")); 
 
- console.log(rest.get(time >rest.get("open") && time < rest.get("closed")));
+
+// rest.
+// set("categories", ['Italian ', 'Pizzeria', 'Vegetarian ', 'organic '],) 
+// .set("open", "11")
+// .set("closed" , "23")
+// .set(true,"we are open :D")
+// .set(false,"we are clsoed :( ");
+
+// rest.get("name")
+// console.log(rest.get("name"));
+
+// console.log(rest.get(true));
+
+// console.log(rest.get(1));
+
+//  const time = 21 ;
+
+//  console.log(rest.get(time >rest.get("open") && time < rest.get("closed")));
 
     
- console.log(rest.has("categories"));
+//  console.log(rest.has("categories"));
 
- rest.delete(2);
-//  rest.clear();
+//  rest.delete(2);
+// //  rest.clear();
 
-const arr = [1,2]
-rest.set(arr,"test")
-rest.set(document.querySelector("h1"),"heading");
- console.log(rest);
+// const arr = [1,2]
+// rest.set(arr,"test")
+// rest.set(document.querySelector("h1"),"heading");
+//  console.log(rest);
 
-console.log(rest.size);
+// console.log(rest.size);
 
-console.log(rest.get(arr));
+// console.log(rest.get(arr));
 
-const question = new Map([
-    ["question" , "what is the best programming language in the world ?"],
-    [1, "c"],
-    [2,"java"],
-    [3,"javascirpt"],
-    ["correct",3],
-    [true,"correct "],
-    [false , "try agian ? "]
-
-
-])
-
-console.log(question);
-
-// convert object to map 
-console.log(Object.entries(openingHour));
+// const question = new Map([
+//     ["question" , "what is the best programming language in the world ?"],
+//     [1, "c"],
+//     [2,"java"],
+//     [3,"javascirpt"],
+//     ["correct",3],
+//     [true,"correct "],
+//     [false , "try agian ? "]
 
 
-const HoursMap = new Map(Object.entries(openingHour));
+// ])
 
-console.log(HoursMap);
+// console.log(question);
 
-console.log(question.get("question"))
-for(const [key,value] of question){
-    if (typeof key === "number") {
-        console.log(`Answer ${key} : ${value}  `)
-        }
-}
+// // convert object to map 
+// console.log(Object.entries(openingHour));
 
-// const answer = Number(prompt("your answer "))
 
-const answer = 3;
-console.log(answer);
+// const HoursMap = new Map(Object.entries(openingHour));
+
+// console.log(HoursMap);
+
+// console.log(question.get("question"))
+// for(const [key,value] of question){
+//     if (typeof key === "number") {
+//         console.log(`Answer ${key} : ${value}  `)
+//         }
+// }
+
+// // const answer = Number(prompt("your answer "))
+
+// const answer = 3;
+// console.log(answer);
 
  
 
 
-console.log (question.get(question.get("correct") === answer));
+// console.log (question.get(question.get("correct") === answer));
 
-console.log(...question);
-// console.log(question.entries());
-console.log([...question.entries()]);
-console.log([...question.values()]);
-
-
-const orderiteam = new Set (["pasta","pizza", "risato","pizza","pasta","pizza"]);
-console.log(orderiteam);
-
-console.log(orderiteam.size);
-console.log(orderiteam.has("pizza"));
-console.log(orderiteam.has("bread"));
-
-orderiteam.add("garlic pizza");
-console.log(orderiteam)
-
-orderiteam.delete("risato")
-
-// orderiteam.clear();
-console.log(orderiteam); 
+// console.log(...question);
+// // console.log(question.entries());
+// console.log([...question.entries()]);
+// console.log([...question.values()]);
 
 
-for(const order of orderiteam){
-    console.log(order)
-};
+// const orderiteam = new Set (["pasta","pizza", "risato","pizza","pasta","pizza"]);
+// console.log(orderiteam);
+
+// console.log(orderiteam.size);
+// console.log(orderiteam.has("pizza"));
+// console.log(orderiteam.has("bread"));
+
+// orderiteam.add("garlic pizza");
+// console.log(orderiteam)
+
+// orderiteam.delete("risato")
+
+// // orderiteam.clear();
+// console.log(orderiteam); 
 
 
-const staff = ["waiter","chef","waiter","meneger","chef"];
+// for(const order of orderiteam){
+//     console.log(order)
+// };
 
-const staffUnique =[...new Set(staff)];
-console.log(staffUnique);
-console.log(new Set(["waiter","chef","waiter","meneger","chef"]).size);
+
+// const staff = ["waiter","chef","waiter","meneger","chef"];
+
+// const staffUnique =[...new Set(staff)];
+// console.log(staffUnique);
+// console.log(new Set(["waiter","chef","waiter","meneger","chef"]).size);
 
 
 
