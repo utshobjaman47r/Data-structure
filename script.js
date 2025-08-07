@@ -121,8 +121,9 @@ for(const [key,value] of question){
 
 }
 
-const answer = Number(prompt("your answer")); //  to get the asnwer from the user and make it number becasue we campapre with number  
+// const answer = Number(prompt("your answer")); //  to get the asnwer from the user and make it number becasue we campapre with number  
 
+const answer =  3
 console.log(answer);
 console.log(question.get(question.get("correct") === answer));
 
@@ -130,10 +131,14 @@ console.log(question.get(question.get("correct") === answer));
 
 // convert map inot array 
 
-console.log([...question])
+console.log([...question]);
+// console.log(question.entries());
+console.log([...question.values()]);
+console.log([...question.keys()]);
 
 
 
+ 
 // const properties = Object.keys(openingHour);
 // console.log(openingHour);
 
