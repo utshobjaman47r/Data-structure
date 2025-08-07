@@ -93,8 +93,44 @@ console.log(restT.size)
 
 console.log(restT.get(arrT));
 
+const question = new Map([["question", "what is the best porgramming langugae in the world ? tell me what is "],
+    [1, "c" ],
+    [2,"python"],
+    [3,"javascript"],
+    ['correct',3],
+    [true,'correct'],
+    [false,"try again "]
+]) ;
+
+console.log(question);
 
 
+// convert object  into  maps 
+console.log(Object.entries(openingHour));
+
+const hoursMapT  = new Map(Object.entries(openingHour));
+
+console.log(hoursMapT);
+
+
+console.log(question.get("question"))
+for(const [key,value] of question){
+    if(typeof key === "number"){
+        console.log(`answer${key}: ${value}`)
+    }
+
+}
+
+const answer = Number(prompt("your answer")); //  to get the asnwer from the user and make it number becasue we campapre with number  
+
+console.log(answer);
+console.log(question.get(question.get("correct") === answer));
+
+
+
+// convert map inot array 
+
+console.log([...question])
 
 
 
