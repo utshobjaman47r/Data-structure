@@ -54,91 +54,174 @@ const resturent = {
 
 };
 
-const restT = new Map();
-
-restT.set("name", "clacico italiano");
-
-restT.set(1,"maxican,  NOWWHARE");
-console.log(restT.set(2,"lisbon , portugal"));
-
-restT
-    .set("catagoris",['Italian ', 'Pizzeria', 'Vegetarian ', 'organic '])
-    .set("open", 11 )
-    .set("close",23)
-.set(true, "we are open :D")
-.set(false,"we are closed :(")
-
-console.log(restT.get("name"));
-console.log(restT.get(true));
-console.log(restT.get(1));
-
-const time = 21;
-
-console.log(restT.get(time>restT.get("open") && time < restT.get("close") ));
-
-console.log(restT.has("catagoris"));
-restT.delete(2);
-
-
-const arrT = [1,2];
-
-restT.set(arrT, "test");
-
-restT.set(document.querySelector('h1') , "Heading");
-
-// restT.clear()
-console.log(restT)
-
-console.log(restT.size)
-
-console.log(restT.get(arrT));
-
-const question = new Map([["question", "what is the best porgramming langugae in the world ? tell me what is "],
-    [1, "c" ],
-    [2,"python"],
-    [3,"javascript"],
-    ['correct',3],
-    [true,'correct'],
-    [false,"try again "]
-]) ;
-
-console.log(question);
-
-
-// convert object  into  maps 
-console.log(Object.entries(openingHour));
-
-const hoursMapT  = new Map(Object.entries(openingHour));
-
-console.log(hoursMapT);
-
-
-console.log(question.get("question"))
-for(const [key,value] of question){
-    if(typeof key === "number"){
-        console.log(`answer${key}: ${value}`)
-    }
-
-}
-
-// const answer = Number(prompt("your answer")); //  to get the asnwer from the user and make it number becasue we campapre with number  
-
-const answer =  3
-console.log(answer);
-console.log(question.get(question.get("correct") === answer));
 
 
 
-// convert map inot array 
-
-console.log([...question]);
-// console.log(question.entries());
-console.log([...question.values()]);
-console.log([...question.keys()]);
 
 
 
- 
+
+
+
+// silce method 
+const airLine = "TAP air Portugal";
+
+const plane = "A320";
+
+console.log(plane[0]);
+console.log(plane[1]);
+console.log(plane[2]);
+console.log(plane[3]);
+
+console.log("B737"[0]); 
+
+console.log(airLine.length);
+console.log("B737".length);
+
+//methods 
+console.log(airLine.indexOf("r"));
+console.log(airLine.lastIndexOf("r"));
+
+console.log(airLine.indexOf("Portugal"));
+console.log(airLine.slice(4));
+
+console.log(airLine.slice(4,7))
+
+console.log(airLine.slice(0 ,airLine. indexOf(" ")));
+
+console.log(airLine.slice(airLine.lastIndexOf(" ")+1));
+
+console.log(airLine.slice(-1));
+
+console.log(airLine.slice( 1,-2));
+
+
+
+// const restT = new Map();
+
+// restT.set("name", "clacico italiano");
+
+// restT.set(1,"maxican,  NOWWHARE");
+// console.log(restT.set(2,"lisbon , portugal"));
+
+// restT
+//     .set("catagoris",['Italian ', 'Pizzeria', 'Vegetarian ', 'organic '])
+//     .set("open", 11 )
+//     .set("close",23)
+// .set(true, "we are open :D")
+// .set(false,"we are closed :(")
+
+// console.log(restT.get("name"));
+// console.log(restT.get(true));
+// console.log(restT.get(1));
+
+// const time = 21;
+
+// console.log(restT.get(time>restT.get("open") && time < restT.get("close") ));
+
+// console.log(restT.has("catagoris"));
+// restT.delete(2);
+
+
+// const arrT = [1,2];
+
+// restT.set(arrT, "test");
+
+// restT.set(document.querySelector('h1') , "Heading");
+
+// // restT.clear()
+// console.log(restT)
+
+// console.log(restT.size)
+
+// console.log(restT.get(arrT));
+
+// const question = new Map([["question", "what is the best porgramming langugae in the world ? tell me what is "],
+//     [1, "c" ],
+//     [2,"python"],
+//     [3,"javascript"],
+//     ['correct',3],
+//     [true,'correct'],
+//     [false,"try again "]
+// ]) ;
+
+// console.log(question);
+
+
+// // convert object  into  maps 
+// console.log(Object.entries(openingHour));
+
+// const hoursMapT  = new Map(Object.entries(openingHour));
+
+// console.log(hoursMapT);
+
+
+// console.log(question.get("question"))
+// for(const [key,value] of question){
+//     if(typeof key === "number"){
+//         console.log(`answer${key}: ${value}`)
+//     }
+
+// }
+
+// // const answer = Number(prompt("your answer")); //  to get the asnwer from the user and make it number becasue we campapre with number  
+
+// const answer =  3
+// console.log(answer);
+// console.log(question.get(question.get("correct") === answer));
+
+
+
+// // convert map inot array 
+
+// console.log([...question]);
+// // console.log(question.entries());
+// console.log([...question.values()]);
+// console.log([...question.keys()]);
+
+
+
+// const gameEvent =  new Map([
+//     [17,"goal"],
+//     [36,"Substitution"],
+//     [47,"goal"],
+//     [61,"substitution"],
+//     [64,"yellow card "],
+//     [69,"red card "],
+//     [70,"substitution "],
+//     [76,"goal"],
+//     [80,"goal"],
+//     [92,"yellow card"]
+// ]); 
+
+
+
+// const events = [...new Set(gameEvent.values())];
+// console.log(events)
+
+// gameEvent.delete(64);
+// console.log(gameEvent)
+
+// let totalEvnt = 0;
+// let lastEvent = 0;
+// for(const[key,value] of gameEvent.entries()){
+
+// }
+
+// const events = new Set([  
+//     [17,"goal"],
+//     [36,"Substitution"],
+//     [47,"goal"],
+//     [61,"substitution"],
+//     [64,"yellow card "],
+//     [69,"red card "],
+//     [70,"substitution "],
+//     [76,"goal"],
+//     [80,"goal"],
+//     [92,"yellow card"]
+// ])
+
+// console.log(events)
 // const properties = Object.keys(openingHour);
 // console.log(openingHour);
 
