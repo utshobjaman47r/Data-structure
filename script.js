@@ -96,6 +96,34 @@ console.log(airLine.slice(-1));
 console.log(airLine.slice( 1,-2));
 
 
+// const cheackMiddleSeat = function (seat) {
+//     // B AND E seats are in middle 
+//     const s = seat.slice(-1);
+//     if(s === "B",s === "E"){
+//        console.log(`YOUR SEAT ON THE MIDDLE `) 
+//     }else{
+//         console.log("you are lucky one ")
+        
+//     }
+// }
+
+// cheackMiddleSeat("11B");
+// cheackMiddleSeat("13C");
+// cheackMiddleSeat("3E");
+
+const cheackMiddleSeat = function(seat){
+    const s =  seat.slice(-1);
+    if(s === "B"||s ==="E"){
+        console.log("You have a seat on middle ");
+    }else{
+        console.log("you are lucky one ")
+    }
+
+}
+
+cheackMiddleSeat("11B");
+cheackMiddleSeat("23C");
+cheackMiddleSeat("3E");
 
 // const restT = new Map();
 
