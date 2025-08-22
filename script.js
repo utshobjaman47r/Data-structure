@@ -96,34 +96,35 @@ console.log(airLine.slice(-1));
 console.log(airLine.slice( 1,-2));
 
 
-// const cheackMiddleSeat = function (seat) {
-//     // B AND E seats are in middle 
-//     const s = seat.slice(-1);
-//     if(s === "B",s === "E"){
-//        console.log(`YOUR SEAT ON THE MIDDLE `) 
+
+
+// const cheackMiddleSeat = function(seat){
+//     const s =  seat.slice(-1);
+//     if(s === "B"||s ==="E"){
+//         console.log("You have a seat on middle ");
 //     }else{
 //         console.log("you are lucky one ")
-        
 //     }
+
 // }
 
 // cheackMiddleSeat("11B");
-// cheackMiddleSeat("13C");
+// cheackMiddleSeat("23C"); 
 // cheackMiddleSeat("3E");
 
-const cheackMiddleSeat = function(seat){
-    const s =  seat.slice(-1);
-    if(s === "B"||s ==="E"){
-        console.log("You have a seat on middle ");
-    }else{
-        console.log("you are lucky one ")
-    }
 
-}
+// console.log(new String("utshob"));
+// console.log( typeof  new String("utshob"));
 
-cheackMiddleSeat("11B");
-cheackMiddleSeat("23C");
-cheackMiddleSeat("3E");
+console.log(new String("BATMAN"));
+console.log(typeof new String("BATMAN"));
+
+
+
+
+
+
+
 
 // const restT = new Map();
 
